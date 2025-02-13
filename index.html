@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+<head>
+<style>
+    body {
+        text-align: center;
+        background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6209773116977.5bfecec84bb98.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+</style>
+</head>
+<body>
+	<h1> Olá mundo! </h1>
+	<h3>Aula 13/02/2025</h3>
+	<input type="text" id="i1">
+	</input>
+	<input type="number" id="i2">
+	</input>
+	<input type="number" id="i3">
+	</input>
+	<button id="Enviar">Enviar</button>
+	<br>
+
+	<h3 style="color: red; font-size: 30px;" id="resultado">
+	</h3>
+	<script>
+
+
+        let valores = [];
+		document.getElementById('Enviar').addEventListener("click", function () {
+
+
+			document.querySelectorAll("input").forEach(input => {
+				valores.push(input.value);
+			})
+
+			valores.sort((x, y) => x - y);
+            let nome = valores[1];
+            document.getElementById('resultado').textContent = nome;
+		});
+
+		
+
+	
+	</script>
+</body>
+</html>
